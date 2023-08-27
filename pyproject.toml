@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pysmartoil"
+version = "0.1.0"
+authors = [
+  { name="Ilya Rakhlin", email="i.rakhlin@gmail.com" },
+]
+description = "Unofficial SmartOil Rest API"
+readme = "README.md"
+requires-python = ">=3.10, <4"
+dependencies = [
+    "aiohttp>=3.8.1"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Operating System :: MacOS :: MacOS X",
+]
+keywords = [
+    "smartoil",
+    "oil-guage",
+    "api"
+]
+
+[tool.hatch.build]
+include = [
+  "pysmartoil"
+]
+[tool.hatch.build.targets.wheel]
+packages = ["pysmartoil"]
+
+
+[project.urls]
+"Homepage" = "https://github.com/irakhlin/pysmartoil"
+"Bug Tracker" = "https://github.com/irakhlin/pysmartoil/issues"
